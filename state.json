@@ -1,6 +1,6 @@
 {
- "last_run_pt": "2026-10-31T12:15:00-07:00",
- "run_label": "12pm",
+ "last_run_pt": "2026-10-31T13:15:00-07:00",
+ "run_label": "1pm",
  "items": {
   "derik-queen": {
    "player": "Derik Queen",
@@ -307,6 +307,26 @@
    "summary": "Champagnie/Keldon Johnson top candidates to start if Castle sits",
    "first_seen_pt": "2026-10-31T12:15:00-07:00",
    "last_updated_pt": "2026-10-31T12:15:00-07:00"
+  },
+  "will-richard": {
+   "player": "Will Richard",
+   "team": "GSW",
+   "trigger": "Curry (knee), Draymond (back) out Sunday",
+   "trigger_status": "out",
+   "verdict": "Watch",
+   "summary": "Likely starts Sun; one-game",
+   "first_seen_pt": "2026-10-31T13:15:00-07:00",
+   "last_updated_pt": "2026-10-31T13:15:00-07:00"
+  },
+  "joan-beringer": {
+   "player": "Joan Beringer",
+   "team": "MIN",
+   "trigger": "Gobert (back) Q Sat",
+   "trigger_status": "out",
+   "verdict": "Watch",
+   "summary": "Starts if Gobert sits",
+   "first_seen_pt": "2026-10-31T13:15:00-07:00",
+   "last_updated_pt": "2026-10-31T13:15:00-07:00"
   }
  },
  "drop_watch": [
