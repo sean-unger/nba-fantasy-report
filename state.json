@@ -1,6 +1,6 @@
 {
- "last_run_pt": "2026-10-31T14:15:00-07:00",
- "run_label": "2pm",
+ "last_run_pt": "2026-10-31T15:15:00-07:00",
+ "run_label": "3pm",
  "items": {
   "derik-queen": {
    "player": "Derik Queen",
@@ -327,6 +327,26 @@
    "summary": "Starts if Gobert sits",
    "first_seen_pt": "2026-10-31T13:15:00-07:00",
    "last_updated_pt": "2026-10-31T13:15:00-07:00"
+  },
+  "bennedict-mathurin": {
+   "player": "Bennedict Mathurin",
+   "team": "NOP",
+   "trigger": "Murray out Sat (personal)",
+   "trigger_status": "out",
+   "verdict": "Watch",
+   "summary": "Likely starts one game",
+   "first_seen_pt": "2026-10-31T15:15:00-07:00",
+   "last_updated_pt": "2026-10-31T15:15:00-07:00"
+  },
+  "jay-huff": {
+   "player": "Jay Huff",
+   "team": "IND",
+   "trigger": "Zubac (ankle) out Sun, 4th straight game",
+   "trigger_status": "out",
+   "verdict": "Watch",
+   "summary": "Starting C again; Nance bump",
+   "first_seen_pt": "2026-10-31T15:15:00-07:00",
+   "last_updated_pt": "2026-10-31T15:15:00-07:00"
   }
  },
  "drop_watch": [
@@ -366,6 +386,7 @@
   "LeBron James (rest Sat)",
   "Joel Embiid (rest Sat)",
   "Fred VanVleet (rest Sat)",
-  "Stephon Castle (Q, migraine)"
+  "Stephon Castle (Q, migraine)",
+  "Mikel Brown Jr. (back, out Sun)"
  ]
 }
