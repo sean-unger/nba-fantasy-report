@@ -1,6 +1,6 @@
 {
- "last_run_pt": "2026-10-31T15:15:00-07:00",
- "run_label": "3pm",
+ "last_run_pt": "2026-10-31T16:10:00-07:00",
+ "run_label": "4pm",
  "items": {
   "derik-queen": {
    "player": "Derik Queen",
@@ -145,12 +145,12 @@
   "clint-capela": {
    "player": "Clint Capela",
    "team": "HOU",
-   "trigger": "Sengun (back soreness) out Fri vs DAL; Adams out",
+   "trigger": "Sengun back; Capela to bench Sat",
    "trigger_status": "out",
    "verdict": "Watch",
-   "summary": "Starting C Fri sans Sengun; one-game/short-term bump",
+   "summary": "Back to bench Sat vs OKC",
    "first_seen_pt": "2026-10-27T15:15:00-07:00",
-   "last_updated_pt": "2026-10-30T17:15:00-07:00"
+   "last_updated_pt": "2026-10-31T16:10:00-07:00"
   },
   "ayo-dosunmu": {
    "player": "Ayo Dosunmu",
@@ -272,9 +272,9 @@
    "trigger": "Morant (left hamstring, Grade 2) out ~4 weeks; Henderson confirmed starting Sat at UTA",
    "trigger_status": "out",
    "verdict": "Speculative add",
-   "summary": "Moved into starting lineup Sat (Highkin); Holiday also in backcourt",
+   "summary": "Started Sat at UTA: 14 pts/3 stl in 31 min; Holiday also in backcourt",
    "first_seen_pt": "2026-10-30T12:20:00-07:00",
-   "last_updated_pt": "2026-10-31T12:15:00-07:00",
+   "last_updated_pt": "2026-10-31T16:10:00-07:00",
    "last_notified_pt": "2026-10-31T12:15:00-07:00",
    "notified_for": "Morant out ~4 wks; Henderson confirmed starter; Speculative add"
   },
@@ -294,19 +294,19 @@
    "trigger": "Embiid (foot) out Sat, second night of back-to-back",
    "trigger_status": "out",
    "verdict": "Watch",
-   "summary": "Likely starts Sat at CHA; one-game maintenance bump",
+   "summary": "Confirmed starter Sat at CHA; one-game maintenance bump",
    "first_seen_pt": "2026-10-31T12:15:00-07:00",
-   "last_updated_pt": "2026-10-31T12:15:00-07:00"
+   "last_updated_pt": "2026-10-31T16:10:00-07:00"
   },
   "julian-champagnie": {
    "player": "Julian Champagnie",
    "team": "SAS",
-   "trigger": "Castle (migraine) questionable Sat vs MIN",
-   "trigger_status": "questionable",
+   "trigger": "Castle (migraine) cleared to play Sat",
+   "trigger_status": "available",
    "verdict": "Watch",
-   "summary": "Champagnie/Keldon Johnson top candidates to start if Castle sits",
+   "summary": "Castle available; bump off",
    "first_seen_pt": "2026-10-31T12:15:00-07:00",
-   "last_updated_pt": "2026-10-31T12:15:00-07:00"
+   "last_updated_pt": "2026-10-31T16:10:00-07:00"
   },
   "will-richard": {
    "player": "Will Richard",
@@ -321,12 +321,12 @@
   "joan-beringer": {
    "player": "Joan Beringer",
    "team": "MIN",
-   "trigger": "Gobert (back) Q Sat",
+   "trigger": "Gobert (back) out Sat, first miss of season",
    "trigger_status": "out",
    "verdict": "Watch",
-   "summary": "Starts if Gobert sits",
+   "summary": "Starts in Gobert's place Sat",
    "first_seen_pt": "2026-10-31T13:15:00-07:00",
-   "last_updated_pt": "2026-10-31T13:15:00-07:00"
+   "last_updated_pt": "2026-10-31T16:10:00-07:00"
   },
   "bennedict-mathurin": {
    "player": "Bennedict Mathurin",
@@ -386,7 +386,7 @@
   "LeBron James (rest Sat)",
   "Joel Embiid (rest Sat)",
   "Fred VanVleet (rest Sat)",
-  "Stephon Castle (Q, migraine)",
+  "Rudy Gobert (out Sat, back)",
   "Mikel Brown Jr. (back, out Sun)"
  ]
 }
