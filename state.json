@@ -1,19 +1,7 @@
 {
- "last_run_pt": "2026-10-30T23:35:00-07:00",
- "run_label": "11:30pm",
+ "last_run_pt": "2026-10-31T12:15:00-07:00",
+ "run_label": "12pm",
  "items": {
-  "tristan-da-silva": {
-   "player": "Tristan da Silva",
-   "team": "ORL",
-   "trigger": "Banchero out 4-6 wks (high-ankle sprain)",
-   "trigger_status": "out",
-   "verdict": "Speculative add",
-   "summary": "Not in Sun starting five; bench rotation forward while Banchero out 4-6 wks",
-   "first_seen_pt": "2026-10-24T20:25:00-07:00",
-   "last_updated_pt": "2026-10-25T16:15:00-07:00",
-   "last_notified_pt": "2026-10-24T23:40:00-07:00",
-   "notified_for": "Banchero out 4-6 wks (high-ankle sprain); verdict Add now"
-  },
   "derik-queen": {
    "player": "Derik Queen",
    "team": "NOP",
@@ -37,18 +25,6 @@
    "last_updated_pt": "2026-10-27T20:15:00-07:00",
    "last_notified_pt": "2026-10-24T23:40:00-07:00",
    "notified_for": "Flagg (shoulder) out; Irving out; verdict Watch"
-  },
-  "paul-reed": {
-   "player": "Paul Reed",
-   "team": "DET",
-   "trigger": "Duren (hamstring) out ~2 wks, re-evaluated in two weeks",
-   "trigger_status": "out",
-   "verdict": "Add now",
-   "summary": "Starting C, ~26 min, 19 pts/11 reb vs MIA; rebounds, blocks, FG%.",
-   "first_seen_pt": "2026-10-24T20:25:00-07:00",
-   "last_updated_pt": "2026-10-25T12:15:00-07:00",
-   "last_notified_pt": "2026-10-25T12:15:00-07:00",
-   "notified_for": "Duren out ~2 wks; verdict Add now"
   },
   "bryce-hopkins": {
    "player": "Bryce Hopkins",
@@ -98,16 +74,6 @@
    "last_notified_pt": "2026-10-26T15:15:00-07:00",
    "notified_for": "Murray out 10-14 days; verdict Add now"
   },
-  "allen-graves": {
-   "player": "Allen Graves",
-   "team": "TOR",
-   "trigger": "Kawhi Leonard (knee) out multiple weeks",
-   "trigger_status": "out",
-   "verdict": "Watch",
-   "summary": "Started Sun; Kawhi out weeks, Walter preferred add",
-   "first_seen_pt": "2026-10-25T15:15:00-07:00",
-   "last_updated_pt": "2026-10-27T12:15:00-07:00"
-  },
   "jase-richardson": {
    "player": "Jase Richardson",
    "team": "ORL",
@@ -117,16 +83,6 @@
    "summary": "Started Wed vs TOR but only 14 min (10 pts); Black also started",
    "first_seen_pt": "2026-10-25T15:15:00-07:00",
    "last_updated_pt": "2026-10-28T21:15:00-07:00"
-  },
-  "jay-huff": {
-   "player": "Jay Huff",
-   "team": "IND",
-   "trigger": "Zubac (ankle) out, no timetable (encouraging)",
-   "trigger_status": "out",
-   "verdict": "Speculative add",
-   "summary": "Starting C Mon; Zubac no timetable",
-   "first_seen_pt": "2026-10-25T17:20:00-07:00",
-   "last_updated_pt": "2026-10-26T17:15:00-07:00"
   },
   "sion-james": {
    "player": "Sion James",
@@ -162,16 +118,6 @@
    "last_notified_pt": "2026-10-26T15:15:00-07:00",
    "notified_for": "Williams surgery, Wallace out for season; verdict Add now"
   },
-  "daniss-jenkins": {
-   "player": "Daniss Jenkins",
-   "team": "DET",
-   "trigger": "Thompson (ankle) available Tue; Jenkins back to bench",
-   "trigger_status": "out",
-   "verdict": "Watch",
-   "summary": "Back to bench; value faded",
-   "first_seen_pt": "2026-10-25T19:15:00-07:00",
-   "last_updated_pt": "2026-10-27T18:15:00-07:00"
-  },
   "anthony-black": {
    "player": "Anthony Black",
    "team": "ORL",
@@ -195,16 +141,6 @@
    "last_updated_pt": "2026-10-28T18:15:00-07:00",
    "last_notified_pt": "2026-10-27T13:20:00-07:00",
    "notified_for": "JJJ out 6-8 wks; verdict Add now"
-  },
-  "kobe-sanders": {
-   "player": "Kobe Sanders",
-   "team": "LAC",
-   "trigger": "Hachimura (quad) back to start Fri",
-   "trigger_status": "out",
-   "verdict": "Watch",
-   "summary": "Back to bench Fri; value faded",
-   "first_seen_pt": "2026-10-27T13:20:00-07:00",
-   "last_updated_pt": "2026-10-30T17:15:00-07:00"
   },
   "clint-capela": {
    "player": "Clint Capela",
@@ -280,26 +216,6 @@
    "first_seen_pt": "2026-10-28T14:15:00-07:00",
    "last_updated_pt": "2026-10-29T17:15:00-07:00"
   },
-  "tari-eason": {
-   "player": "Tari Eason",
-   "team": "HOU",
-   "trigger": "Sengun out Fri; Smart (forearm) available",
-   "trigger_status": "out",
-   "verdict": "Watch",
-   "summary": "Back to bench Fri; value faded",
-   "first_seen_pt": "2026-10-28T17:15:00-07:00",
-   "last_updated_pt": "2026-10-30T17:15:00-07:00"
-  },
-  "josh-green": {
-   "player": "Josh Green",
-   "team": "UTA",
-   "trigger": "Markkanen (wrist) out Wed",
-   "trigger_status": "out",
-   "verdict": "Watch",
-   "summary": "Starting Wed vs SAS; likely one-game bump",
-   "first_seen_pt": "2026-10-28T18:15:00-07:00",
-   "last_updated_pt": "2026-10-28T18:15:00-07:00"
-  },
   "yaxel-lendeborg": {
    "player": "Yaxel Lendeborg",
    "team": "GSW",
@@ -353,12 +269,14 @@
   "scoot-henderson": {
    "player": "Scoot Henderson",
    "team": "POR",
-   "trigger": "Morant (left hamstring, Grade 2) out ~4 weeks (Portland announced)",
+   "trigger": "Morant (left hamstring, Grade 2) out ~4 weeks; Henderson confirmed starting Sat at UTA",
    "trigger_status": "out",
-   "verdict": "Watch",
-   "summary": "Jrue Holiday expected to fill the starting backcourt spot; Henderson may see extra bench guard minutes",
+   "verdict": "Speculative add",
+   "summary": "Moved into starting lineup Sat (Highkin); Holiday also in backcourt",
    "first_seen_pt": "2026-10-30T12:20:00-07:00",
-   "last_updated_pt": "2026-10-30T12:20:00-07:00"
+   "last_updated_pt": "2026-10-31T12:15:00-07:00",
+   "last_notified_pt": "2026-10-31T12:15:00-07:00",
+   "notified_for": "Morant out ~4 wks; Henderson confirmed starter; Speculative add"
   },
   "chaney-johnson": {
    "player": "Chaney Johnson",
@@ -369,11 +287,32 @@
    "summary": "Starting PF Fri vs DET (2nd career start); 7.3 pts/3.5 reb in 20.8 min over 4 games",
    "verdict": "Watch",
    "last_updated_pt": "2026-10-30T17:15:00-07:00"
+  },
+  "adem-bona": {
+   "player": "Adem Bona",
+   "team": "PHI",
+   "trigger": "Embiid (foot) out Sat, second night of back-to-back",
+   "trigger_status": "out",
+   "verdict": "Watch",
+   "summary": "Likely starts Sat at CHA; one-game maintenance bump",
+   "first_seen_pt": "2026-10-31T12:15:00-07:00",
+   "last_updated_pt": "2026-10-31T12:15:00-07:00"
+  },
+  "julian-champagnie": {
+   "player": "Julian Champagnie",
+   "team": "SAS",
+   "trigger": "Castle (migraine) questionable Sat vs MIN",
+   "trigger_status": "questionable",
+   "verdict": "Watch",
+   "summary": "Champagnie/Keldon Johnson top candidates to start if Castle sits",
+   "first_seen_pt": "2026-10-31T12:15:00-07:00",
+   "last_updated_pt": "2026-10-31T12:15:00-07:00"
   }
  },
  "drop_watch": [
-  "Reed Sheppard",
   "Dean Wade",
+  "Josh Green",
+  "Reed Sheppard",
   "Naji Marshall",
   "Jarace Walker",
   "Zaccharie Risacher"
@@ -388,7 +327,6 @@
   "Cason Wallace",
   "Jalen Suggs",
   "Paolo Banchero",
-  "Joel Embiid",
   "Ivica Zubac",
   "Jose Alvarado",
   "Steven Adams",
@@ -405,6 +343,10 @@
   "Dejounte Murray",
   "Jordan Poole",
   "Ja Morant",
-  "Kon Knueppel"
+  "Kon Knueppel",
+  "LeBron James (rest Sat)",
+  "Joel Embiid (rest Sat)",
+  "Fred VanVleet (rest Sat)",
+  "Stephon Castle (Q, migraine)"
  ]
 }
