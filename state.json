@@ -1,6 +1,6 @@
 {
- "last_run_pt": "2026-10-31T22:15:00-07:00",
- "run_label": "10pm",
+ "last_run_pt": "2026-10-31T23:15:00-07:00",
+ "run_label": "11pm",
  "items": {
   "derik-queen": {
    "player": "Derik Queen",
@@ -262,9 +262,9 @@
    "trigger": "Jerome (back), Pippen (back) out Sat; Spencer starts at PG",
    "trigger_status": "role",
    "verdict": "Speculative add",
-   "summary": "Starting PG Sat vs SAC; had moved ahead of Pippen in backup rotation",
+   "summary": "Started Sat vs SAC: 10 pts/5 reb/13 ast, 0 TO in 25 min; Jerome (back) out Sat",
    "first_seen_pt": "2026-10-30T12:20:00-07:00",
-   "last_updated_pt": "2026-10-31T17:15:00-07:00"
+   "last_updated_pt": "2026-10-31T23:15:00-07:00"
   },
   "scoot-henderson": {
    "player": "Scoot Henderson",
