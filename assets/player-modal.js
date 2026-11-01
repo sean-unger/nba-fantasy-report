@@ -7,8 +7,9 @@
 //     with each category's projected per-game stat under its bar
 //   - the stats table (2 seasons ago .. this season, L90, L30, projections)
 //   - the player's latest ESPN news (same Rotowire feed as the extension)
-//   - the team depth chart, with ROS projected minutes/FGA per player;
-//     tapping anyone on it opens their own modal
+//   - the team depth chart from the nightly projected playing time
+//     (/api/playing-time), with a Live / ROS toggle, projected minutes plus
+//     FantasyPros ROS FGA per player; tapping anyone on it opens their modal
 // Everything is fetched live from the browser when the modal opens; the
 // backend and site.api.espn.com both allow any origin.
 
@@ -141,10 +142,12 @@
             return candidates.find((p) => p.team === toTricode(team)) ?? null;
         });
 
-    const fetchDepthChart = (tricode) => cached(`depth|${tricode}`, () => getJson(`${API_BASE_URL}/api/depth-chart/${encodeURIComponent(tricode)}`));
+    // { team, live, ros }: the team's newest projected depth charts, with
+    // ESPN injury fields on each entry.
+    const fetchPlayingTime = (tricode) => cached(`playtime|${tricode}`, () => getJson(`${API_BASE_URL}/api/playing-time/${encodeURIComponent(tricode)}`));
 
-    // playerId -> { min, fga } from the team's FantasyPros ROS projections,
-    // for the depth chart's "(32/14)" labels.
+    // playerId -> { min, fga } from the team's FantasyPros ROS projections;
+    // the depth chart's "(32/14)" labels use only the FGA.
     const fetchTeamProjections = (tricode) =>
         cached(`teamproj|${tricode}`, async () => {
             const body = await getJson(`${API_BASE_URL}/api/players?pageSize=100&team=${encodeURIComponent(tricode)}&statsFantasyProsRosProjection`);
@@ -360,23 +363,40 @@
             <circle cx="240" cy="572" r="8" fill="none" stroke="var(--pm-accent)" stroke-width="3" />
         </svg>`;
 
-    const injuryClass = (entry) => (entry.injuryAbbreviation === 'O' ? 'out' : 'dtd');
+    const isOut = (entry) => entry.injuryAbbreviation === 'O' || entry.injuryStatus === 'Out';
+    const injuryClass = (entry) => (isOut(entry) ? 'out' : 'dtd');
     const avatarHtml = (entry, size) =>
         `<div class="dc-avatar dc-avatar-${size}"><img src="${headshotUrl(entry.playerId)}" alt="" data-fallback="${escapeHtml(initials(entry.playerName))}"></div>`;
 
     // Each player is itself a .player link, so tapping one opens their modal.
     const playerAttrs = (entry, tricode) => ` data-name="${escapeHtml(entry.playerName)}" data-team="${escapeHtml(tricode)}"`;
 
+    // live: today's injured players stay out. ros: players expected back
+    // this season are in. The sheet opens on Live every time.
+    const DEPTH_VIEWS = [
+        { key: 'live', label: 'Live', caption: 'current injuries stay out' },
+        { key: 'ros', label: 'ROS', caption: 'injured players back when healthy' },
+    ];
+
+    // "(32/14)": projected minutes (this chart) / FantasyPros ROS FGA per
+    // game, or "(32)" when FantasyPros has no line for the player.
     function projectionHtml(entry, projectionById) {
-        const p = projectionById.get(entry.playerId);
-        if (!p) return '';
-        return ` <span class="dc-proj">(${fmt0(p.min)}/${fmt0(p.fga)})</span>`;
+        const fga = projectionById.get(entry.playerId)?.fga;
+        return ` <span class="dc-proj">(${fmt0(entry.mpg)}${fga != null ? `/${fmt0(fga)}` : ''})</span>`;
     }
 
-    function depthChartHtml(depthChart, subjectId, projectionById) {
-        const tricode = depthChart.team;
+    function depthChartHtml(playingTime, viewKey, subjectId, projectionById) {
+        const tricode = playingTime.team;
+        const view = DEPTH_VIEWS.find((v) => v.key === viewKey);
+        const chart = playingTime[viewKey];
+        const toggle = DEPTH_VIEWS.map(
+            (v) => `<button type="button" data-view="${v.key}" class="${v.key === viewKey ? 'on' : ''}" aria-pressed="${v.key === viewKey}">${v.label}</button>`
+        ).join('');
+        const head = `<div class="pm-section-row"><h3>${escapeHtml(tricode)} Depth Chart</h3><div class="pm-segmented dc-view-toggle">${toggle}</div></div>`;
+        if (!chart) return `${head}<div class="pm-empty">No ${view.label} projection for ${escapeHtml(tricode)} yet.</div>`;
+
         const chips = POSITION_ORDER.map((pos) => {
-            const starter = depthChart.positions[pos]?.[0];
+            const starter = chart.positions[pos]?.[0];
             if (!starter) return '';
             const { left, top } = COURT_CHIP_POSITION[pos];
             const injury = starter.injuryStatus ? `<div class="dc-chip-injury ${injuryClass(starter)}">${escapeHtml(starter.injuryStatus)}</div>` : '';
@@ -391,7 +411,7 @@
         }).join('');
 
         const benchCols = POSITION_ORDER.map((pos) => {
-            const rows = (depthChart.positions[pos] ?? [])
+            const rows = (chart.positions[pos] ?? [])
                 .slice(1)
                 .map((entry) => {
                     const status = entry.injuryStatus ? `<div class="dc-bench-status ${injuryClass(entry)}">${escapeHtml(entry.injuryStatus)}</div>` : '';
@@ -404,11 +424,27 @@
             return `<div class="dc-bench-col"><div class="dc-bench-col-head">${POSITION_LABELS[pos]}</div>${rows || '<div class="dc-bench-empty">&mdash;</div>'}</div>`;
         }).join('');
 
-        return `<div class="pm-section-row"><h3>${escapeHtml(tricode)} Depth Chart</h3>
-                <div class="dc-legend"><span><i class="dc-swatch dtd"></i>Day-To-Day</span><span><i class="dc-swatch out"></i>Out</span></div></div>
+        // Everyone the projection leaves out: today's injuries (live) or
+        // season-ending ones (ros).
+        const unavailable = (chart.unavailable ?? [])
+            .map((entry) => {
+                const detail = [entry.reason, entry.expectedReturn && `back ${entry.expectedReturn}`].filter(Boolean).join(' · ');
+                return `<div class="dc-out-player player${entry.playerId === subjectId ? ' is-subject' : ''}"${playerAttrs(entry, tricode)}>
+                    ${avatarHtml(entry, 'sm')}
+                    <div class="dc-bench-meta"><div class="dc-out-name">${escapeHtml(entry.playerName)}</div><div class="dc-out-detail">${escapeHtml(detail)}</div></div>
+                </div>`;
+            })
+            .join('');
+
+        return `${head}
             <div class="dc-court-wrap">${COURT_SVG}${chips}</div>
-            <p class="dc-caption">Bench, ranked by depth &middot; (ROS min/FGA) &middot; tap anyone for their card</p>
-            <div class="dc-bench-grid">${benchCols}</div>`;
+            <div class="dc-caption-row">
+                <p class="dc-caption">Bench, ranked by depth &middot; (min/FGA) &middot; tap anyone for their card</p>
+                <div class="dc-legend"><span><i class="dc-swatch dtd"></i>Day-To-Day</span><span><i class="dc-swatch out"></i>Out</span></div>
+            </div>
+            <div class="dc-bench-grid">${benchCols}</div>
+            ${unavailable ? `<p class="dc-caption dc-out-caption">Unavailable</p><div class="dc-out-list">${unavailable}</div>` : ''}
+            <p class="dc-note">${view.label} projection, ${view.caption} &middot; as of ${escapeHtml(chart.asOfDate)}${chart.notes ? ` &middot; ${escapeHtml(chart.notes)}` : ''}</p>`;
     }
 
     // Based on the extension's fitBenchNames: if any bench name doesn't fit
@@ -539,12 +575,23 @@
         .dc-bench-grid.no-avatars .dc-bench-name-text { overflow: visible; overflow-wrap: anywhere; }
         .dc-bench-name { display: flex; align-items: baseline; gap: 3px; font-size: 10.5px; font-weight: 700; color: var(--pm-text2); white-space: nowrap; line-height: 1.2; }
         .dc-bench-name-text { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+        .dc-chip-name .dc-proj { display: block; }
         .dc-proj { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 9.5px; font-weight: 600; color: var(--pm-muted); white-space: nowrap; flex: none; }
         .dc-bench-player.is-subject .dc-bench-name { color: var(--pm-accent-strong); }
         .dc-bench-status { font-size: 8.5px; font-weight: 700; margin-top: 1px; }
         .dc-bench-status.dtd { color: var(--pm-dtd); }
         .dc-bench-status.out { color: var(--pm-out); }
         .dc-bench-empty { font-size: 11px; color: var(--pm-muted); text-align: center; padding-top: 4px; }
+        .dc-view-toggle button.on { background: var(--pm-accent); color: #fff; }
+        .dc-caption-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+        .dc-caption-row .dc-caption { margin: 0; }
+        .dc-out-caption { margin-top: 16px; }
+        .dc-out-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; }
+        .dc-out-player { display: flex; align-items: center; gap: 6px; padding: 4px; border-radius: 8px; min-width: 0; }
+        .dc-out-player.is-subject { background: var(--pm-accent-soft); box-shadow: inset 0 0 0 1.5px var(--pm-accent-soft-strong); }
+        .dc-out-name { font-size: 10.5px; font-weight: 700; color: var(--pm-out); line-height: 1.2; }
+        .dc-out-detail { font-size: 9.5px; color: var(--pm-muted); line-height: 1.25; margin-top: 1px; }
+        .dc-note { font-size: 10.5px; color: var(--pm-muted); line-height: 1.4; margin: 14px 0 0; }
     `;
 
     // ---------- modal ----------
@@ -635,12 +682,19 @@
             return;
         }
         try {
-            const [depthChart, projectionById] = await Promise.all([fetchDepthChart(tricode), fetchTeamProjections(tricode).catch(() => new Map())]);
+            const [playingTime, projectionById] = await Promise.all([fetchPlayingTime(tricode), fetchTeamProjections(tricode).catch(() => new Map())]);
             if (!isCurrent()) return;
             const section = $('.pm-s-depth');
-            section.innerHTML = depthChartHtml(depthChart, player?.playerId, projectionById);
-            wireImageFallbacks(section);
-            fitBenchNames(section);
+            const render = (viewKey) => {
+                section.innerHTML = depthChartHtml(playingTime, viewKey, player?.playerId, projectionById);
+                wireImageFallbacks(section);
+                fitBenchNames(section);
+            };
+            render('live');
+            section.addEventListener('click', (event) => {
+                const button = event.target.closest('.dc-view-toggle button');
+                if (button && !button.classList.contains('on')) render(button.dataset.view);
+            });
             resizeObserver = new ResizeObserver(() => fitBenchNames(section));
             resizeObserver.observe(section);
         } catch (error) {
