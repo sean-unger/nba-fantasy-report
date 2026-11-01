@@ -1,6 +1,6 @@
 {
- "last_run_pt": "2026-10-31T23:32:00-07:00",
- "run_label": "11:30pm",
+ "last_run_pt": "2026-11-01T12:15:00-08:00",
+ "run_label": "12pm",
  "items": {
   "derik-queen": {
    "player": "Derik Queen",
@@ -229,12 +229,12 @@
   "jalen-smith": {
    "player": "Jalen Smith",
    "team": "CHI",
-   "trigger": "Claxton (hamstring) out, getting closer",
+   "trigger": "Claxton (hamstring) practiced fully Sun, debut near",
    "trigger_status": "out",
    "verdict": "Watch",
-   "summary": "17/11/5/3 blk vs NYK; ~46% rostered",
+   "summary": "Starting C while Claxton out; likely loses starting job on return (~46% rostered)",
    "first_seen_pt": "2026-10-28T23:20:00-07:00",
-   "last_updated_pt": "2026-10-28T23:20:00-07:00"
+   "last_updated_pt": "2026-11-01T12:15:00-08:00"
   },
   "karlo-matkovic": {
    "player": "Karlo Matković",
@@ -367,6 +367,26 @@
    "summary": "Rookie PG, 9 threes, 6 games in; minutes unconfirmed",
    "first_seen_pt": "2026-10-31T22:15:00-07:00",
    "last_updated_pt": "2026-10-31T22:15:00-07:00"
+  },
+  "neemias-queta": {
+   "player": "Neemias Queta",
+   "team": "BOS",
+   "trigger": "Mitchell Robinson (rest) out Sun at ORL; Queta starts at C",
+   "trigger_status": "out",
+   "verdict": "Watch",
+   "summary": "One-game start Sun (back-to-back maintenance); Garza/Cenac Jr. bench minutes bump",
+   "first_seen_pt": "2026-11-01T12:15:00-08:00",
+   "last_updated_pt": "2026-11-01T12:15:00-08:00"
+  },
+  "vit-krejci": {
+   "player": "Vít Krejčí",
+   "team": "POR",
+   "trigger": "Morant (hamstring) out ~4 wks",
+   "trigger_status": "out",
+   "verdict": "Watch",
+   "summary": "Season-high 24 min Sat; Henderson starts, Holiday/Lillard ahead of him",
+   "first_seen_pt": "2026-11-01T12:15:00-08:00",
+   "last_updated_pt": "2026-11-01T12:15:00-08:00"
   }
  },
  "drop_watch": [
@@ -375,7 +395,8 @@
   "Reed Sheppard",
   "Naji Marshall",
   "Jarace Walker",
-  "Zaccharie Risacher"
+  "Zaccharie Risacher",
+  "Jalen Smith (Claxton returning)"
  ],
  "injury_watch": [
   "Anthony Edwards",
