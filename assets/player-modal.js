@@ -5,7 +5,8 @@
 // common.js):
 //   - the 9-cat value chart (FantasyPros ROS, Per Game / Per Min toggle),
 //     with each category's projected per-game stat under its bar
-//   - the stats table (2 seasons ago .. this season, L90, L30, projections)
+//   - the stats table (2 seasons ago .. this season, L90, L30, projections,
+//     ending with SPS Live / SPS ROS)
 //   - the player's latest ESPN news (same Rotowire feed as the extension)
 //   - the team depth chart from the nightly projected playing time
 //     (/api/playing-time), with a Live / ROS toggle, projected minutes plus
@@ -24,6 +25,8 @@
         'statsCurrentSeason',
         'statsHashtagBasketballProjection',
         'statsFantasyProsRosProjection',
+        'statsSpsLiveProjection',
+        'statsSpsRosProjection',
         'statsLast90',
         'statsLast30',
     ];
@@ -265,6 +268,10 @@
         { key: 'hashtagBasketballProjection', short: 'HASHTAG', projection: true },
         // GP on this row is projected games left, not a full season.
         { key: 'fantasyProsRosProjection', short: 'FP ROS', projection: true },
+        // Basketball-Reference SPS per-36 rates x the nightly live/ros
+        // projected minutes; GP is the team's games left.
+        { key: 'spsLiveProjection', short: 'SPS LIVE', projection: true },
+        { key: 'spsRosProjection', short: 'SPS ROS', projection: true },
     ];
     const COLUMNS = ['GP', 'MIN', 'PTS', 'FG%', 'FT%', '3PM', 'REB', 'AST', 'STL', 'BLK', 'TO', 'FPTS', 'VAL/MIN', 'VALUE'];
 
@@ -275,7 +282,8 @@
 
     function statCells(s, isProjection) {
         if (!s || s.gamesPlayed === 0) {
-            const message = isProjection ? 'No projection data available yet' : 'No games played in this window';
+            // An SPS row at 0 GP is a player projected for 0 minutes.
+            const message = !isProjection ? 'No games played in this window' : s ? '0 projected minutes' : 'No projection data available yet';
             return `<td colspan="${COLUMNS.length}" class="pm-empty-cell">${message}</td>`;
         }
         return [
