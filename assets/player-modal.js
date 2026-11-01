@@ -472,6 +472,10 @@
     const CSS = `
         .player { color: inherit; font-weight: 700; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px; cursor: pointer; }
         .pm-sheet .player { text-decoration: none; font-weight: inherit; }
+        .pm-tap-tip {
+            position: fixed; z-index: 1100; transform: translate(-50%, calc(-100% - 6px)); padding: 5px 9px; border-radius: 6px;
+            background: var(--pm-text); color: var(--pm-bg); font-size: 12.5px; font-weight: 700; white-space: nowrap; pointer-events: none;
+        }
         .pm-backdrop { position: fixed; inset: 0; z-index: 1000; background: rgba(10, 12, 16, 0.5); display: flex; align-items: flex-end; justify-content: center; }
         .pm-sheet {
             --pm-bg: #ffffff; --pm-bg-alt: #f5f7fa; --pm-border: #dde1e8; --pm-border-strong: #c5cbd5;
@@ -608,7 +612,40 @@
     let openToken = 0;
     let resizeObserver = null;
 
+    // Touch screens never show title hover text, so a tap on a [data-tap-tip]
+    // cell shows its title in a bubble above it. The next tap anywhere (or
+    // the same cell again) or a scroll hides it. Desktop keeps the native
+    // title tooltip.
+    const noHover = window.matchMedia('(hover: none)');
+    // About half the widest tip ("Three-Pointers Made: -$12"), so a centered
+    // one stays on screen.
+    const TAP_TIP_EDGE_MARGIN = 95;
+    let tapTip = null;
+    function hideTapTip() {
+        tapTip?.remove();
+        tapTip = null;
+    }
+    function showTapTip(event) {
+        if (!noHover.matches) return;
+        const cell = event.target.closest?.('[data-tap-tip][title]');
+        const again = cell && tapTip?.cell === cell;
+        hideTapTip();
+        if (!cell || again || !backdrop) return;
+        const rect = cell.getBoundingClientRect();
+        const x = Math.min(Math.max(rect.left + rect.width / 2, TAP_TIP_EDGE_MARGIN), window.innerWidth - TAP_TIP_EDGE_MARGIN);
+        const tip = document.createElement('div');
+        tip.className = 'pm-tap-tip';
+        tip.setAttribute('role', 'tooltip');
+        tip.textContent = cell.getAttribute('title');
+        tip.style.left = `${x}px`;
+        tip.style.top = `${rect.top}px`;
+        // Inside the sheet, so it picks up the sheet's colors.
+        backdrop.querySelector('.pm-sheet').appendChild(tip);
+        tapTip = Object.assign(tip, { cell });
+    }
+
     function close() {
+        hideTapTip();
         resizeObserver?.disconnect();
         resizeObserver = null;
         backdrop?.remove();
@@ -721,4 +758,7 @@
         open(el);
     });
     document.addEventListener('keydown', (event) => event.key === 'Escape' && close());
+    document.addEventListener('click', showTapTip, true);
+    window.addEventListener('scroll', hideTapTip, true);
+    window.addEventListener('resize', hideTapTip);
 })();
