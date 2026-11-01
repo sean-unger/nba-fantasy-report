@@ -1,6 +1,6 @@
 {
- "last_run_pt": "2026-11-01T12:15:00-08:00",
- "run_label": "12pm",
+ "last_run_pt": "2026-11-01T13:15:00-08:00",
+ "run_label": "1pm",
  "items": {
   "derik-queen": {
    "player": "Derik Queen",
@@ -209,12 +209,12 @@
   "jake-laravia": {
    "player": "Jake LaRavia",
    "team": "LAL",
-   "trigger": "Doncic back Fri; Z. Williams (foot) Q",
+   "trigger": "Z. Williams (foot) out Sun, 3rd straight; Thiero out",
    "trigger_status": "out",
    "verdict": "Watch",
-   "summary": "Starts only if Williams sits",
+   "summary": "Should start Sun vs TOR with Williams and Thiero out",
    "first_seen_pt": "2026-10-28T14:15:00-07:00",
-   "last_updated_pt": "2026-10-29T17:15:00-07:00"
+   "last_updated_pt": "2026-11-01T13:15:00-08:00"
   },
   "yaxel-lendeborg": {
    "player": "Yaxel Lendeborg",
@@ -232,9 +232,9 @@
    "trigger": "Claxton (hamstring) practiced fully Sun, debut near",
    "trigger_status": "out",
    "verdict": "Watch",
-   "summary": "Starting C while Claxton out; likely loses starting job on return (~46% rostered)",
+   "summary": "Starting C; Claxton doubtful Mon vs PHI so Smith likely starts again; loses job on return (~46% rostered)",
    "first_seen_pt": "2026-10-28T23:20:00-07:00",
-   "last_updated_pt": "2026-11-01T12:15:00-08:00"
+   "last_updated_pt": "2026-11-01T13:15:00-08:00"
   },
   "karlo-matkovic": {
    "player": "Karlo Matković",
@@ -374,9 +374,9 @@
    "trigger": "Mitchell Robinson (rest) out Sun at ORL; Queta starts at C",
    "trigger_status": "out",
    "verdict": "Watch",
-   "summary": "One-game start Sun (back-to-back maintenance); Garza/Cenac Jr. bench minutes bump",
+   "summary": "One-game start Sun; Gonzalez also entering BOS starting lineup, Walsh out of it",
    "first_seen_pt": "2026-11-01T12:15:00-08:00",
-   "last_updated_pt": "2026-11-01T12:15:00-08:00"
+   "last_updated_pt": "2026-11-01T13:15:00-08:00"
   },
   "vit-krejci": {
    "player": "Vít Krejčí",
