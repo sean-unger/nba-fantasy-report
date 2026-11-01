@@ -1,6 +1,6 @@
 {
- "last_run_pt": "2026-10-31T16:10:00-07:00",
- "run_label": "4pm",
+ "last_run_pt": "2026-10-31T17:15:00-07:00",
+ "run_label": "5pm",
  "items": {
   "derik-queen": {
    "player": "Derik Queen",
@@ -259,12 +259,12 @@
   "cam-spencer": {
    "player": "Cam Spencer",
    "team": "MEM",
-   "trigger": "Moved ahead of Scotty Pippen in the backup guard rotation (Commercial Appeal)",
+   "trigger": "Jerome (back), Pippen (back) out Sat; Spencer starts at PG",
    "trigger_status": "role",
    "verdict": "Speculative add",
-   "summary": "8 pts/6 reb/8 ast/2 stl in 23 min Thu vs POR; season highs in boards and dimes, leads second unit in assists",
+   "summary": "Starting PG Sat vs SAC; had moved ahead of Pippen in backup rotation",
    "first_seen_pt": "2026-10-30T12:20:00-07:00",
-   "last_updated_pt": "2026-10-30T12:20:00-07:00"
+   "last_updated_pt": "2026-10-31T17:15:00-07:00"
   },
   "scoot-henderson": {
    "player": "Scoot Henderson",
@@ -324,9 +324,9 @@
    "trigger": "Gobert (back) out Sat, first miss of season",
    "trigger_status": "out",
    "verdict": "Watch",
-   "summary": "Starts in Gobert's place Sat",
+   "summary": "First start of season Sat at SAS in place of Gobert",
    "first_seen_pt": "2026-10-31T13:15:00-07:00",
-   "last_updated_pt": "2026-10-31T16:10:00-07:00"
+   "last_updated_pt": "2026-10-31T17:15:00-07:00"
   },
   "bennedict-mathurin": {
    "player": "Bennedict Mathurin",
