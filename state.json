@@ -1,6 +1,6 @@
 {
- "last_run_pt": "2026-10-31T18:10:00-07:00",
- "run_label": "6pm",
+ "last_run_pt": "2026-10-31T19:10:00-07:00",
+ "run_label": "7pm",
  "items": {
   "derik-queen": {
    "player": "Derik Queen",
@@ -387,6 +387,7 @@
   "Joel Embiid (rest Sat)",
   "Fred VanVleet (rest Sat)",
   "Rudy Gobert (out Sat, back)",
-  "Mikel Brown Jr. (back, out Sun)"
+  "Mikel Brown Jr. (back, out Sun)",
+  "Jalen Johnson (ankle, left Sat vs NOP; Q)"
  ]
 }
