@@ -1,6 +1,6 @@
 {
- "last_run_pt": "2026-11-01T14:15:00-08:00",
- "run_label": "2pm",
+ "last_run_pt": "2026-11-01T15:20:00-08:00",
+ "run_label": "3pm",
  "items": {
   "derik-queen": {
    "player": "Derik Queen",
@@ -351,12 +351,12 @@
   "asa-newell": {
    "player": "Asa Newell",
    "team": "ATL",
-   "trigger": "Landale (hip) left Sat early, did not return",
+   "trigger": "Landale (hip) ruled out Monday vs IND",
    "trigger_status": "out",
    "verdict": "Watch",
-   "summary": "Entered rotation after Landale injury; severity unknown",
+   "summary": "Entered rotation after Landale injury; Landale out Mon, severity unknown",
    "first_seen_pt": "2026-10-31T20:15:00-07:00",
-   "last_updated_pt": "2026-10-31T20:15:00-07:00"
+   "last_updated_pt": "2026-11-01T15:20:00-08:00"
   },
   "darius-acuff-jr": {
    "player": "Darius Acuff Jr.",
