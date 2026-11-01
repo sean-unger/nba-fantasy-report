@@ -1,6 +1,6 @@
 {
- "last_run_pt": "2026-10-31T19:10:00-07:00",
- "run_label": "7pm",
+ "last_run_pt": "2026-10-31T20:15:00-07:00",
+ "run_label": "8pm",
  "items": {
   "derik-queen": {
    "player": "Derik Queen",
@@ -324,9 +324,9 @@
    "trigger": "Gobert (back) out Sat, first miss of season",
    "trigger_status": "out",
    "verdict": "Watch",
-   "summary": "First start of season Sat at SAS in place of Gobert",
+   "summary": "First start Sat at SAS: 12 pts/6 reb/2 ast/1 stl",
    "first_seen_pt": "2026-10-31T13:15:00-07:00",
-   "last_updated_pt": "2026-10-31T17:15:00-07:00"
+   "last_updated_pt": "2026-10-31T20:15:00-07:00"
   },
   "bennedict-mathurin": {
    "player": "Bennedict Mathurin",
@@ -347,6 +347,16 @@
    "summary": "Starting C again; Nance bump",
    "first_seen_pt": "2026-10-31T15:15:00-07:00",
    "last_updated_pt": "2026-10-31T15:15:00-07:00"
+  },
+  "asa-newell": {
+   "player": "Asa Newell",
+   "team": "ATL",
+   "trigger": "Landale (hip) left Sat early, did not return",
+   "trigger_status": "out",
+   "verdict": "Watch",
+   "summary": "Entered rotation after Landale injury; severity unknown",
+   "first_seen_pt": "2026-10-31T20:15:00-07:00",
+   "last_updated_pt": "2026-10-31T20:15:00-07:00"
   }
  },
  "drop_watch": [
