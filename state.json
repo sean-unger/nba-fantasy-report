@@ -1,6 +1,6 @@
 {
- "last_run_pt": "2026-10-31T21:15:00-07:00",
- "run_label": "9pm",
+ "last_run_pt": "2026-10-31T22:15:00-07:00",
+ "run_label": "10pm",
  "items": {
   "derik-queen": {
    "player": "Derik Queen",
@@ -357,6 +357,16 @@
    "summary": "Entered rotation after Landale injury; severity unknown",
    "first_seen_pt": "2026-10-31T20:15:00-07:00",
    "last_updated_pt": "2026-10-31T20:15:00-07:00"
+  },
+  "darius-acuff-jr": {
+   "player": "Darius Acuff Jr.",
+   "team": "SAC",
+   "trigger": "Career-high 38 pts Sat; no offensive limits",
+   "trigger_status": "active",
+   "verdict": "Watch",
+   "summary": "Rookie PG, 9 threes, 6 games in; minutes unconfirmed",
+   "first_seen_pt": "2026-10-31T22:15:00-07:00",
+   "last_updated_pt": "2026-10-31T22:15:00-07:00"
   }
  },
  "drop_watch": [
