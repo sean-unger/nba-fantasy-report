@@ -1,6 +1,6 @@
 {
-  "last_run_pt": "2026-11-01T16:20:00-08:00",
-  "run_label": "4pm",
+  "last_run_pt": "2026-11-01T17:15:00-08:00",
+  "run_label": "5pm",
   "items": {
     "derik-queen": {
       "player": "Derik Queen",
@@ -179,10 +179,10 @@
     "nolan-traore": {
       "player": "Nolan Traore",
       "team": "BKN",
-      "trigger": "D\u00ebmin (leg bone bruise) out, reevaluated in one week; Traore starting PG",
+      "trigger": "Dëmin (leg bone bruise) out, reevaluated in one week; Traore starting PG",
       "trigger_status": "out",
       "verdict": "Watch",
-      "summary": "Starting PG; 17/5 ast Sun, 15 pts Tue; D\u00ebmin out ~1 wk",
+      "summary": "Starting PG; 17/5 ast Sun, 15 pts Tue; Dëmin out ~1 wk",
       "first_seen_pt": "2026-10-27T17:15:00-07:00",
       "last_updated_pt": "2026-10-30T14:15:00-07:00"
     },
@@ -219,7 +219,7 @@
     "yaxel-lendeborg": {
       "player": "Yaxel Lendeborg",
       "team": "GSW",
-      "trigger": "Porzi\u0146\u0123is (illness) out, 'extreme pessimism' he plays for GSW again",
+      "trigger": "Porziņģis (illness) out, 'extreme pessimism' he plays for GSW again",
       "trigger_status": "out",
       "verdict": "Speculative add",
       "summary": "Starting F; 26/8 vs MIN",
@@ -237,7 +237,7 @@
       "last_updated_pt": "2026-11-01T13:15:00-08:00"
     },
     "karlo-matkovic": {
-      "player": "Karlo Matkovi\u0107",
+      "player": "Karlo Matković",
       "team": "NOP",
       "trigger": "Missi (knee) out; Jordan to bench",
       "trigger_status": "out",
@@ -379,7 +379,7 @@
       "last_updated_pt": "2026-11-01T13:15:00-08:00"
     },
     "vit-krejci": {
-      "player": "V\u00edt Krej\u010d\u00ed",
+      "player": "Vít Krejčí",
       "team": "POR",
       "trigger": "Morant (hamstring) out ~4 wks",
       "trigger_status": "out",
@@ -387,6 +387,16 @@
       "summary": "Season-high 24 min Sat; Henderson starts, Holiday/Lillard ahead of him",
       "first_seen_pt": "2026-11-01T12:15:00-08:00",
       "last_updated_pt": "2026-11-01T12:15:00-08:00"
+    },
+    "tristan-da-silva": {
+      "player": "Tristan da Silva",
+      "team": "ORL",
+      "trigger": "Banchero out 4-6 wks; Suggs out 2+ wks",
+      "trigger_status": "out",
+      "verdict": "Watch",
+      "summary": "23 pts/10 reb in 35 min off bench Sun vs BOS",
+      "first_seen_pt": "2026-11-01T17:15:00-08:00",
+      "last_updated_pt": "2026-11-01T17:15:00-08:00"
     }
   },
   "drop_watch": [
@@ -416,8 +426,8 @@
     "Alperen Sengun",
     "Tyrese Haliburton",
     "Justin Champagnie",
-    "Kristaps Porzi\u0146\u0123is",
-    "Luka Don\u010di\u0107",
+    "Kristaps Porziņģis",
+    "Luka Dončić",
     "Tre Johnson",
     "Brandon Ingram",
     "Dejounte Murray",
