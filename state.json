@@ -1,6 +1,6 @@
 {
-  "last_run_pt": "2026-11-01T19:15:00-08:00",
-  "run_label": "7pm",
+  "last_run_pt": "2026-11-01T20:15:00-08:00",
+  "run_label": "8pm",
   "items": {
     "derik-queen": {
       "player": "Derik Queen",
@@ -219,12 +219,14 @@
     "yaxel-lendeborg": {
       "player": "Yaxel Lendeborg",
       "team": "GSW",
-      "trigger": "Porziņģis (illness) out, 'extreme pessimism' he plays for GSW again",
+      "trigger": "Porziņģis (illness) out indefinitely; Butler (knee) out until new year",
       "trigger_status": "out",
-      "verdict": "Speculative add",
-      "summary": "Starting F; 26/8 vs MIN",
+      "verdict": "Add now",
+      "summary": "Career-high 37 Sun; 25.2 ppg/32 min last 5, starting F",
       "first_seen_pt": "2026-10-28T20:15:00-07:00",
-      "last_updated_pt": "2026-10-28T20:15:00-07:00"
+      "last_updated_pt": "2026-11-01T20:15:00-08:00",
+      "last_notified_pt": "2026-11-01T20:15:00-08:00",
+      "notified_for": "Porziņģis/Butler out long-term; verdict Add now"
     },
     "jalen-smith": {
       "player": "Jalen Smith",
@@ -261,10 +263,10 @@
       "team": "MEM",
       "trigger": "Jerome (back), Pippen (back) out Sat; Spencer starts at PG",
       "trigger_status": "role",
-      "verdict": "Speculative add",
-      "summary": "Started Sat vs SAC: 10 pts/5 reb/13 ast, 0 TO in 25 min; Jerome (back) out Sat",
+      "verdict": "Watch",
+      "summary": "Jerome back Mon; Spencer to bench",
       "first_seen_pt": "2026-10-30T12:20:00-07:00",
-      "last_updated_pt": "2026-10-31T23:15:00-07:00"
+      "last_updated_pt": "2026-11-01T20:15:00-08:00"
     },
     "scoot-henderson": {
       "player": "Scoot Henderson",
@@ -437,9 +439,31 @@
       "summary": "Starting G Sun at LAC; one-night",
       "first_seen_pt": "2026-11-01T19:15:00-08:00",
       "last_updated_pt": "2026-11-01T19:15:00-08:00"
+    },
+    "gradey-dick": {
+      "player": "Gradey Dick",
+      "team": "LAC",
+      "trigger": "D. Jones Jr. (knee) left Sun game",
+      "trigger_status": "q",
+      "verdict": "Watch",
+      "summary": "Minutes if Jones misses time",
+      "first_seen_pt": "2026-11-01T20:15:00-08:00",
+      "last_updated_pt": "2026-11-01T20:15:00-08:00"
+    },
+    "dayron-sharpe": {
+      "player": "Day'Ron Sharpe",
+      "team": "BKN",
+      "trigger": "15/13 in BKN's first win",
+      "trigger_status": "q",
+      "verdict": "Watch",
+      "summary": "Best game of season vs short-handed IND",
+      "first_seen_pt": "2026-11-01T20:15:00-08:00",
+      "last_updated_pt": "2026-11-01T20:15:00-08:00"
     }
   },
   "drop_watch": [
+    "Cam Spencer (Jerome back Mon)",
+    "Joan Beringer (Gobert back Mon)",
     "Dean Wade",
     "Josh Green",
     "Reed Sheppard",
@@ -480,6 +504,7 @@
     "Fred VanVleet (rest Sat)",
     "Rudy Gobert (out Sat, back)",
     "Mikel Brown Jr. (back, out Sun)",
-    "Jalen Johnson (ankle, left Sat vs NOP; Q)"
+    "Jalen Johnson (ankle, left Sat vs NOP; Q)",
+    "Derrick Jones Jr. (right knee, left Sun)"
   ]
 }
