@@ -1,6 +1,6 @@
 {
-  "last_run_pt": "2026-11-01T17:15:00-08:00",
-  "run_label": "5pm",
+  "last_run_pt": "2026-11-01T18:15:00-08:00",
+  "run_label": "6pm",
   "items": {
     "derik-queen": {
       "player": "Derik Queen",
@@ -397,6 +397,26 @@
       "summary": "23 pts/10 reb in 35 min off bench Sun vs BOS",
       "first_seen_pt": "2026-11-01T17:15:00-08:00",
       "last_updated_pt": "2026-11-01T17:15:00-08:00"
+    },
+    "trayce-jackson-davis": {
+      "player": "Trayce Jackson-Davis",
+      "team": "TOR",
+      "trigger": "Poeltl (shoulder bursitis) late scratch Sun",
+      "trigger_status": "out",
+      "verdict": "Watch",
+      "summary": "First start of season at C; Murray-Boyles also up",
+      "first_seen_pt": "2026-11-01T18:15:00-08:00",
+      "last_updated_pt": "2026-11-01T18:15:00-08:00"
+    },
+    "charles-bassey": {
+      "player": "Charles Bassey",
+      "team": "GSW",
+      "trigger": "Draymond Green rest Sun (back-to-back)",
+      "trigger_status": "out",
+      "verdict": "Watch",
+      "summary": "Starting C Sun at LAC; one-game",
+      "first_seen_pt": "2026-11-01T18:15:00-08:00",
+      "last_updated_pt": "2026-11-01T18:15:00-08:00"
     }
   },
   "drop_watch": [
