@@ -1,6 +1,6 @@
 {
-  "last_run_pt": "2026-11-01T18:15:00-08:00",
-  "run_label": "6pm",
+  "last_run_pt": "2026-11-01T19:15:00-08:00",
+  "run_label": "7pm",
   "items": {
     "derik-queen": {
       "player": "Derik Queen",
@@ -249,12 +249,12 @@
     "tyler-kolek": {
       "player": "Tyler Kolek",
       "team": "NYK",
-      "trigger": "Alvarado (ankle) out, week-to-week",
+      "trigger": "Alvarado (ankle) chance to return Mon",
       "trigger_status": "out",
       "verdict": "Watch",
       "summary": "9 pts/9 ast in 18 min Wed; backup PG",
       "first_seen_pt": "2026-10-29T17:15:00-07:00",
-      "last_updated_pt": "2026-10-29T17:15:00-07:00"
+      "last_updated_pt": "2026-11-01T19:15:00-08:00"
     },
     "cam-spencer": {
       "player": "Cam Spencer",
@@ -417,6 +417,26 @@
       "summary": "Starting C Sun at LAC; one-game",
       "first_seen_pt": "2026-11-01T18:15:00-08:00",
       "last_updated_pt": "2026-11-01T18:15:00-08:00"
+    },
+    "georges-niang": {
+      "player": "Georges Niang",
+      "team": "GSW",
+      "trigger": "Curry, Draymond rest Sun",
+      "trigger_status": "out",
+      "verdict": "Watch",
+      "summary": "Starting PF Sun at LAC; one-night",
+      "first_seen_pt": "2026-11-01T19:15:00-08:00",
+      "last_updated_pt": "2026-11-01T19:15:00-08:00"
+    },
+    "deanthony-melton": {
+      "player": "De'Anthony Melton",
+      "team": "GSW",
+      "trigger": "Curry rest Sun",
+      "trigger_status": "out",
+      "verdict": "Watch",
+      "summary": "Starting G Sun at LAC; one-night",
+      "first_seen_pt": "2026-11-01T19:15:00-08:00",
+      "last_updated_pt": "2026-11-01T19:15:00-08:00"
     }
   },
   "drop_watch": [
@@ -426,7 +446,8 @@
     "Naji Marshall",
     "Jarace Walker",
     "Zaccharie Risacher",
-    "Jalen Smith (Claxton returning)"
+    "Jalen Smith (Claxton returning)",
+    "Tyler Kolek (Alvarado may return Mon)"
   ],
   "injury_watch": [
     "Anthony Edwards",
